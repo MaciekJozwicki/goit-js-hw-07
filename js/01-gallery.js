@@ -23,6 +23,7 @@ galleryItems.forEach((item) => {
 
 galleryEl.addEventListener("click", (event) => {
     event.preventDefault()
+    
     console.log("tak")
 })
 
