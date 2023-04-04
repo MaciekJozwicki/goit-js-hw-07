@@ -7,7 +7,7 @@ const galleryEl = document.querySelector(".gallery")
 galleryItems.forEach((item) => {
     const galleryItemEl = `
     <div class="gallery__item">
-        <a class="gallery__link" href="large-image.jpg">
+        <a class="gallery__link" href="${item.original}">
             <img
             class="gallery__image"
             src="${item.preview}"
@@ -23,19 +23,7 @@ galleryItems.forEach((item) => {
 
 galleryEl.addEventListener("click", (event) => {
     event.preventDefault()
-    
-    console.log("tak")
+    const photo = basicLightbox.create(`<img src=${event.target.dataset.source}>`)
+    photo.show()
+    console.log(event.currentTarget)
 })
-
-
-
-
-
-
-
-
-
-
-
-
-console.log();
