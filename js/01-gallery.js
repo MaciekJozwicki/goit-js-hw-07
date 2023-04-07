@@ -26,4 +26,10 @@ galleryEl.addEventListener("click", (event) => {
     const photo = basicLightbox.create(`<img src=${event.target.dataset.source}>`)
     photo.show()
     console.log(event.currentTarget)
+
+        document.addEventListener("keydown", (event) => {
+        if (event.key === "Escape") {
+            photo.close()
+        }
+        })
 })
